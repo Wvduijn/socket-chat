@@ -4,11 +4,12 @@ const express = require('express');
 const clientPath = path.join(__dirname, '../client');
 const port = process.env.PORT || 3000;
 
-const app = express();
+var app = express();
 
 app.use(express.static(clientPath));
 
-app.listen(3000, () => {
-    console.log(`server is up at port ${port}`);
-})
+app.listen(port, () => {
+    console.log(`Server is up on ${port}`);
+});
+  
 
